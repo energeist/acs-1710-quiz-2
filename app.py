@@ -29,7 +29,6 @@ def swapi_search():
             'hair_color': json.loads(response.content).get('hair_color'),
             'eye_color': json.loads(response.content).get('eye_color'),
         }
-        print(context)
         return render_template('swapi_search.html', **context)
     else:
         return render_template('swapi_search.html')
