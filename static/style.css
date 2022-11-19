@@ -1,0 +1,38 @@
+html {
+    background-color: #e6faff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    width: 80%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    border: 1px solid #007a99;
+    box-shadow: 5px 5px 5px #999;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    width: 25%;
+    height: 25px;
+}
+
+h1 a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    background-color: lightblue;
+    border: 2px solid black;
+}
