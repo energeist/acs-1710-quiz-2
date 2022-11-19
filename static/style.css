@@ -1,5 +1,9 @@
 html {
-    background-color: #e6faff;
+    background-image: url('./space.jpg');
+    background-size: stretch;
+    background-color: #000;
+    color: rgb(255, 196, 68);
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +15,7 @@ html {
 fieldset {
     display: flex;
     flex-direction: column;
-    background-color: lightyellow;
+    background-color: midnightblue;
     border: 1px solid #007a99;
     box-shadow: 5px 5px 5px #999;
     padding: 20px;
@@ -27,12 +31,3 @@ fieldset {
     height: 25px;
 }
 
-h1 a {
-    color: #000;
-    text-decoration: none;
-}
-
-img {
-    background-color: lightblue;
-    border: 2px solid black;
-}

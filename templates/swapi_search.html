@@ -6,7 +6,7 @@ SWAPI Search
 
 {% block content %}
 <h1>SWAPI search</h1>
-<form action="/swapi_search" method="POST">
+<form action="/" method="POST">
     <fieldset>
         <legend>Character search:</legend>        
         <p>
@@ -20,46 +20,49 @@ SWAPI Search
 </form>
 <section id="form_results">
     {% if detail == 'Not found' %}
-        <p>404 - These aren't the droids you're looking for!</p>        
+        <p>404 - ID not found!</p>
+        <img src="https://media.tenor.com/TlfAvuz0tLMAAAAC/obi-wan-kenobi-these-are-not-the-droids.gif">        
     {% else %}
-        {% if name != 'n/a' and name != 'none'  %}
-        <p>
-            Name: {{name}}
-        </p>
-        {% endif %}
-        {% if height != 'n/a' and height != 'none' %}
-        <p>
-            Height: {{height}} {% if height != 'unknown' %}cm{% endif %}
-        </p>  
-        {% endif %}
-        {% if mass != 'n/a' and mass != 'none' %}
-        <p>
-            Mass: {{mass}} {% if mass != 'unknown' %}kg{% endif %}
-        </p>
-        {% endif %}
-        {% if hair_color != 'n/a' and hair_color != 'none' %}
-        <p>
-            Hair color: {{hair_color}}
-        </p>
-        {% endif %}
-        {% if eye_color != 'n/a' and eye_color != 'none' %}
-        <p>
-            Eye color: {{eye_color}}
-        </p>
-        {% endif %}
-        {% if homeworld %} 
-        <p>
-            Homeworld: {{homeworld}}
-        </p>
-        {% endif %}
-        {% if movies %}
-        <p>Appears in the following films:</p>
-        <ul>
-            {% for movie in movies %}
-                <li>{{movie}}</li>
-            {% endfor %}
-        </ul>
-        {% endif%}         
+        {% if name %}
+            {% if name != 'n/a' and name != 'none'  %}
+            <p>
+                Name: {{name}}
+            </p>
+            {% endif %}
+            {% if height != 'n/a' and height != 'none' %}
+            <p>
+                Height: {{height}} {% if height != 'unknown' %}cm{% endif %}
+            </p>  
+            {% endif %}
+            {% if mass != 'n/a' and mass != 'none' %}
+            <p>
+                Mass: {{mass}} {% if mass != 'unknown' %}kg{% endif %}
+            </p>
+            {% endif %}
+            {% if hair_color != 'n/a' and hair_color != 'none' %}
+            <p>
+                Hair color: {{hair_color}}
+            </p>
+            {% endif %}
+            {% if eye_color != 'n/a' and eye_color != 'none' %}
+            <p>
+                Eye color: {{eye_color}}
+            </p>
+            {% endif %}
+            {% if homeworld %} 
+            <p>
+                Homeworld: {{homeworld}}
+            </p>
+            {% endif %}
+            {% if movies %}
+            <p>Appears in the following films:</p>
+            <ul>
+                {% for movie in movies %}
+                    <li>{{movie}}</li>
+                {% endfor %}
+            </ul>
+            {% endif%}
+        {% endif %}         
     {% endif %}
 </section>
 {% endblock %}

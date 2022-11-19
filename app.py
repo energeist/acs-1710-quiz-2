@@ -11,7 +11,7 @@ app = Flask(__name__)
 SWAPI_BASE_URL = 'https://swapi.py4e.com/api/'
 SWAPI_PEOPLE_API = 'https://swapi.py4e.com/api/people/'
 
-@app.route('/swapi_search', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def swapi_search():
     SWAPI_PEOPLE_API = 'https://swapi.py4e.com/api/people/'
     if request.method == 'POST':

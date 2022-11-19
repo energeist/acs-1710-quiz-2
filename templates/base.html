@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/style.css">
-        <title>{% block title %}{% endblock %}</title>
-    </head>
-    <body>
-    {% block content %}{% endblock %}
-    </body>
+    <div class="background">
+        <section class="content">
+            <head>
+                <link rel="stylesheet" href="/static/style.css">
+                <title>{% block title %}{% endblock %}</title>
+            </head>
+            <body>
+            {% block content %}{% endblock %}
+            </body>
+        </section>
+    </div>
 </html>
